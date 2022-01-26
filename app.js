@@ -1,15 +1,15 @@
 const express = require('express');
 const app = express();
-require('./database/db')
+require('./src/database/db')
 const cors = require('cors');
 const cookieParser = require('cookie-parser')
 
 app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
-app.use(require('./routers/empresaVisitanteRouter'))
-app.use(require('./routers/visitanteRouter'))
-app.use(require('./routers/usuarioRouter'))
+app.use(require('./src/routers/empresaVisitanteRouter'))
+app.use(require('./src/routers/visitanteRouter'))
+app.use(require('./src/routers/usuarioRouter'))
 
 
 const PORT = process.env.PORT || 3001;
