@@ -18,7 +18,6 @@ module.exports= {
 			return res.status(200).send(user)
 		}catch(erro){
 
-			return res.status(500).send({"error": "falha ao cadastrar usuario"})
 			console.log(erro);
 		}
 

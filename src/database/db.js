@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Visit:6T1FCvFOTpDPoLWj@cluster0.qec6n.mongodb.net/appvisit?retryWrites=true&w=majority',
+
+mongoose.connect('mongodb://localhost/tongaat',
 { useUnifiedTopology: true,
- useNewUrlParser: true }
+ useNewUrlParser: true,
+ useCreateIndex: true,  }
 ,()=> console.log('mongodb running'))
 
 module.exports = mongoose;
+
