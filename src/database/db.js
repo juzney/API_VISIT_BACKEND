@@ -1,10 +1,17 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://webjuzney:L4ypVafHJ715OS5J@cluster0.xkoov.mongodb.net/appVisit?retryWrites=true&w=majority',
-{ useUnifiedTopology: true,
- useNewUrlParser: true,
- useCreateIndex: true,  }
-,()=> console.log('mongodb running'))
+
+mongoose.connect('mongodb+srv://webjuzney:neynine@cluster0.xkoov.mongodb.net/appVisit?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    
+}).then(() =>
+{
+    console.log('DB is connected')
+}).catch((error) =>
+{
+    console.log('Something is wrong', error)
+})
 
 module.exports = mongoose;
 

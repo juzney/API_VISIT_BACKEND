@@ -28,7 +28,7 @@ module.exports = {
 		}
 
 		catch(erro){
-			return res.status(400).send({"erro":"falha ao listar visitantes"})
+			console.log(erro)
 		}
 
 
